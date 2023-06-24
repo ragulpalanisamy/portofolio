@@ -1,6 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Quicksand&display=swap");
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   --bg-color: #707680;
   --second-bg-color: #323946;
@@ -50,6 +54,19 @@ body {
 .my-nav-class6 {
   --i: 6;
 }
+.my-media-1 {
+  --i: 7;
+}
+.my-media-2 {
+  --i: 8;
+}
+.my-media-3 {
+  --i: 9;
+}
+.my-media-4 {
+  --i: 10;
+}
+
 .logo {
   text-decoration: none;
   font-weight: bold;
