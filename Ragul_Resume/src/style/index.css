@@ -35,7 +35,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  background-color: ;
+  background-color: var(--bg-color);
 }
 .my-nav-class1 {
   --i: 1;
@@ -375,6 +375,13 @@ h3 {
   position: sticky;
   top: 0;
   z-index: 100;
+  background-color: #ffffff;
+}
+
+.heading2 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #000000;
   background-color: #ffffff;
 }
 
