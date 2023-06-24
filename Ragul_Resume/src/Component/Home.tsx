@@ -42,7 +42,7 @@ export default function Home() {
   }, []);
 
   return (
-    <section className="home mt-10" id="home">
+    <section className="home" id="home">
       <section className="home-container">
         <h3>Hello, It's Me</h3>
         <h1>Ragul P</h1>
