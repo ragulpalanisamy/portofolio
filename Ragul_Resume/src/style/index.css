@@ -35,6 +35,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 20px;
+  background-color: ;
 }
 .my-nav-class1 {
   --i: 1;
@@ -207,6 +208,9 @@ h3 {
 /* Skills section styles */
 .skills {
   padding: 60px;
+  display: grid;
+  grid-column-start: 1;
+  grid-row-end: 4;
   text-align: center;
 }
 

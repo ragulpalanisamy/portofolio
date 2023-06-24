@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import {
   AiFillCodepenSquare,
   AiFillGithub,
@@ -7,7 +7,7 @@ import {
 } from "react-icons/ai";
 import Typed from "typed.js";
 
-import "../index.css";
+import "../style/index.css";
 
 export default function Home() {
   useEffect(() => {
