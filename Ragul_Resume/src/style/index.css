@@ -70,6 +70,10 @@ body {
 #menu-icon {
   @apply text-[3.6rem] text-[color:var(--text-color)] hidden;
 }
+.active-link {
+  color: #18f5c9ec;
+}
+
 .navbar {
   @apply sticky flex;
 }

@@ -1,30 +1,34 @@
+import { Link } from "react-router-dom";
 import "../style/index.css";
 
 export default function Header() {
   return (
     <header className="header">
-      <a href="#" className="logo text-red-500">
+      <a href="#" className="logo text-6xl">
         Portfolio
       </a>
       <nav id="navbar_top" className="navbar">
-        <a href="#home" className="active my-nav-class1">
+        <Link to="#home" className="my-nav-class1">
           Home
-        </a>
-        <a href="#about" className="my-nav-class2">
+        </Link>
+        <Link to="#about" className="my-nav-class2">
           About
-        </a>
-        <a href="#skills " className="my-nav-class3">
+        </Link>
+        <Link to="#skills" className="my-nav-class3 active:text-[#18f5c9ec]">
           Skills
-        </a>
-        <a href="#project" className="my-nav-class4">
+        </Link>
+        <Link to="#project" className="my-nav-class4 active:text-[#18f5c9ec]">
           Project
-        </a>
-        <a href="contact" className="my-nav-class5">
+        </Link>
+        <Link to="contact" className="my-nav-class5 active:text-[#18f5c9ec]">
           Contact
-        </a>
-        <a href="#experience" className="my-nav-class6">
+        </Link>
+        <Link
+          to="#experience"
+          className="my-nav-class6 active:text-[#18f5c9ec]"
+        >
           Experience
-        </a>
+        </Link>
       </nav>
     </header>
   );
