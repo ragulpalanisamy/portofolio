@@ -1,34 +1,61 @@
-import { Link } from "react-router-dom";
 import "../style/index.css";
 
 export default function Header() {
+  const scrollToSection = (sectionId: string) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <header className="header">
-      <a href="#" className="logo text-6xl">
+      <a href="/" className="logo text-6xl">
         Portfolio
       </a>
       <nav id="navbar_top" className="navbar">
-        <Link to="#home" className="my-nav-class1">
+        <a
+          href="#home"
+          className="my-nav-class1"
+          onClick={() => scrollToSection("home")}
+        >
           Home
-        </Link>
-        <Link to="#about" className="my-nav-class2">
+        </a>
+        <a
+          href="#about"
+          className="my-nav-class2"
+          onClick={() => scrollToSection("about")}
+        >
           About
-        </Link>
-        <Link to="#skills" className="my-nav-class3 active:text-[#18f5c9ec]">
+        </a>
+        <a
+          href="#skills"
+          className="my-nav-class3"
+          onClick={() => scrollToSection("skills")}
+        >
           Skills
-        </Link>
-        <Link to="#project" className="my-nav-class4 active:text-[#18f5c9ec]">
+        </a>
+        <a
+          href="#project"
+          className="my-nav-class4"
+          onClick={() => scrollToSection("project")}
+        >
           Project
-        </Link>
-        <Link to="contact" className="my-nav-class5 active:text-[#18f5c9ec]">
+        </a>
+        <a
+          href="#contact"
+          className="my-nav-class5"
+          onClick={() => scrollToSection("contact")}
+        >
           Contact
-        </Link>
-        <Link
-          to="#experience"
+        </a>
+        <a
+          href="#experience"
           className="my-nav-class6 active:text-[#18f5c9ec]"
+          onClick={() => scrollToSection("experience")}
         >
           Experience
-        </Link>
+        </a>
       </nav>
     </header>
   );

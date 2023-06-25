@@ -83,7 +83,7 @@ body {
 
 /* Home section styles */
 .home {
-  @apply text-center p-[60px] flex justify-between items-center bg-white p-[60px];
+  @apply text-center p-[60px] flex justify-evenly items-center bg-white;
 }
 h3 {
   @apply text-[32px] font-bold opacity-0 animate-[slideTop_1s_ease_forwards];
@@ -109,7 +109,7 @@ h3 {
 
 /* About section styles */
 .about {
-  @apply flex justify-between items-center bg-white p-[60px];
+  @apply flex justify-evenly items-center bg-white p-[60px];
 }
 .about-container {
   @apply w-6/12;

@@ -6,16 +6,20 @@ export default function About() {
       className="about max-w-full p-10 bg-white container my-10"
       id="about"
     >
-      <div className="about-img">
-        <img src="/Ragul Img.jpg" alt="Picture" />
+      <div className="about-img w-[250px] h-[250px]">
+        <img
+          src="/Ragul Img.jpg"
+          alt="Picture"
+          className="w-[250px] h-[250px]"
+        />
       </div>
 
       <div className="about-container">
         <h2 className="heading2">
           About <span>Me</span>
         </h2>
-        <h3>Frontend Developer</h3>
-        <p>
+        <h3 className="m-3">Frontend Developer</h3>
+        <p className="p-3 font-serif leading-relaxed">
           Highly skilled and versatile Front-End Developer with expertise in
           HTML, CSS, JavaScript, ReactJS, Bootstrap, and Tailwind. Adept at
           translating designs into responsive and visually appealing web
@@ -26,9 +30,11 @@ export default function About() {
           technologies. Committed to delivering high-quality projects on time
           and exceeding client expectations.
         </p>
-        <a href="#" className="btn">
-          Read More
-        </a>
+        <div>
+          <a href="#" className="btn m-3">
+            Read More
+          </a>
+        </div>
       </div>
     </section>
   );
