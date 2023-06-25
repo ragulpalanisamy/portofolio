@@ -2,7 +2,7 @@ import "../style/index.css";
 
 export default function Project() {
   return (
-    <section id="project" className="project">
+    <section id="project" className="project my-10 container">
       <h2 className="task">Projects</h2>
       {/* <!-- E-Bus Pass --> */}
       <div className="">

@@ -2,7 +2,7 @@ import "../style/index.css";
 
 export default function Skills() {
   return (
-    <section id="skills" className="skills">
+    <section id="skills" className="skills my-10 container">
       <h2 className="skill">Skills</h2>
       <div className="front">
         <i className="uil uil-arrow skills_icon"></i>

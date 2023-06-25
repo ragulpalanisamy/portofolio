@@ -2,7 +2,10 @@ import "../style/index.css";
 
 export default function About() {
   return (
-    <section className="about" id="about">
+    <section
+      className="about max-w-full p-10 bg-white container my-10"
+      id="about"
+    >
       <div className="about-img">
         <img src="/Ragul Img.jpg" alt="Picture" />
       </div>

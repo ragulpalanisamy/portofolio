@@ -1,9 +1,8 @@
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
-
 @import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Quicksand&display=swap");
+
+@tailwind components;
+@tailwind utilities;
 
 :root {
   --bg-color: #707680;
@@ -14,28 +13,18 @@
 
 /* Reset default margin and padding for all elements */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  @apply box-border m-0 p-0;
 }
 
 /* Set the background color and font styles for the body */
 body {
-  background-color: #f2f2f2;
+  @apply bg-[#f2f2f2];
   font-family: "Inter", sans-serif;
 }
 
 /* Header styles */
 .header {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  background-color: #ffffff;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-  background-color: var(--bg-color);
+  @apply sticky z-[100] bg-white flex justify-between items-center bg-[color:var(--bg-color)] p-5 top-0;
 }
 .my-nav-class1 {
   --i: 1;
@@ -67,353 +56,179 @@ body {
 .my-media-4 {
   --i: 10;
 }
-
 .logo {
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 24px;
-  color: #000000;
+  @apply no-underline font-[bold] text-2xl text-black;
 }
-
 .navbar a {
-  display: inline-block;
-  font-size: 18px;
-  color: #fff;
-  text-decoration: none;
-  font-weight: 500;
-  margin-left: 30px;
-  transition: 0.5s;
-  opacity: 0;
-  animation: slideBottom 0.5s ease forwards;
+  @apply inline-block text-lg text-white no-underline font-medium transition-[0.5s] opacity-0 animate-[slideBottom_0.5s_ease_forwards] ml-[30px] no-underline text-black font-[bold] transition-[color] duration-[0.3s] ease-[ease] ml-5 hover:text-[#10a8f0];
   animation-delay: calc(0.3s * var(--i));
 }
-
 .navbar a:hover,
 .navbar a.active {
-  color: #18f5c9ec;
+  @apply text-[#18f5c9ec];
 }
-
 #menu-icon {
-  font-size: 3.6rem;
-  color: var(--text-color);
-  display: none;
+  @apply text-[3.6rem] text-[color:var(--text-color)] hidden;
 }
-
 .navbar {
-  position: sticky;
-  display: flex;
+  @apply sticky flex;
 }
-
-.navbar a {
-  margin-left: 20px;
-  text-decoration: none;
-  color: #000000;
-  font-weight: bold;
-  transition: color 0.3s ease;
-}
-
-.navbar a:hover {
-  color: #10a8f0;
-}
-
 .active {
-  color: #10a8f0;
+  @apply text-[#10a8f0];
 }
 
 /* Home section styles */
 .home {
-  padding: 60px;
-  text-align: center;
+  @apply text-center p-[60px] flex justify-between items-center bg-white p-[60px];
 }
-
 h3 {
-  font-size: 32px;
-  font-weight: 700;
-  opacity: 0;
-  animation: slideTop 1s ease forwards;
+  @apply text-[32px] font-bold opacity-0 animate-[slideTop_1s_ease_forwards];
   animation-delay: 0.7s;
 }
-
-.home {
-  padding: 60px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #ffffff;
-}
-
 .home h3,
 .home h1,
 .home p {
-  margin-bottom: 20px;
-  color: #000000;
+  @apply text-black mb-5;
 }
-
 .home h1 {
-  font-size: 48px;
-  font-weight: bold;
+  @apply text-5xl font-[bold];
 }
-
 .home p {
-  font-size: 18px;
+  @apply text-lg;
 }
-
 .home-container {
-  width: 50%;
+  @apply w-6/12;
 }
-
 .social-media a {
-  margin-right: 10px;
-  color: #10a8f0;
-  font-size: 24px;
+  @apply text-[#10a8f0] text-2xl mr-2.5;
 }
 
 /* About section styles */
 .about {
-  padding: 60px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #ffffff;
+  @apply flex justify-between items-center bg-white p-[60px];
 }
-
 .about-container {
-  width: 50%;
+  @apply w-6/12;
 }
-
 .about h2 {
-  font-size: 36px;
-  font-weight: bold;
-  color: #000000;
+  @apply text-4xl font-[bold] text-black;
 }
-
 .about h3 {
-  font-size: 24px;
-  font-weight: bold;
-  color: #10a8f0;
-  margin-bottom: 20px;
+  @apply text-2xl font-[bold] text-[#10a8f0] mb-5;
 }
-
 .about p {
-  font-size: 16px;
-  color: #000000;
+  @apply text-base text-black;
 }
-
 .about a {
-  text-decoration: none;
-  color: #10a8f0;
-  font-weight: bold;
+  @apply no-underline text-[#10a8f0] font-[bold];
 }
 
 /* Skills section styles */
 .skills {
-  padding: 60px;
-  display: grid;
-  grid-column-start: 1;
-  grid-row-end: 4;
-  text-align: center;
+  @apply grid col-start-1 row-end-4 text-center p-[60px];
 }
-
 .skills h2 {
-  font-size: 36px;
-  font-weight: bold;
-  color: #000000;
+  @apply text-4xl font-[bold] text-black;
 }
-
 .front,
 .back,
 .db {
-  margin-top: 40px;
+  @apply mt-10;
 }
-
 .front h3,
 .back h3,
 .db h3 {
-  font-size: 24px;
-  font-weight: bold;
-  color: #000000;
+  @apply text-2xl font-[bold] text-black;
 }
 
 /* Project section styles */
 .project {
-  padding: 60px;
-  background-color: #ffffff;
+  @apply bg-white p-[60px];
 }
-
 .project h2 {
-  font-size: 36px;
-  font-weight: bold;
-  color: #000000;
+  @apply text-4xl font-[bold] text-black;
 }
-
 .project div {
-  margin-bottom: 40px;
+  @apply mb-10;
 }
 
 /* Project section styles (continuation) */
 .project h3 {
-  font-size: 24px;
-  font-weight: bold;
-  color: #000000;
+  @apply text-2xl font-[bold] text-black;
 }
-
 .project p {
-  font-size: 16px;
-  color: #000000;
+  @apply text-base text-black;
 }
 
 /* Experience section styles */
 .experience {
-  padding: 60px;
-  text-align: center;
+  @apply text-center p-[60px];
 }
-
 .experience h3 {
-  font-size: 24px;
-  font-weight: bold;
-  color: #000000;
+  @apply text-2xl font-[bold] text-black;
 }
-
 .experience sub {
-  font-size: 14px;
-  color: #777777;
+  @apply text-sm text-[#777777];
 }
 
 /* Contact section styles */
 .contact {
-  padding: 60px;
-  background-color: #ffffff;
+  @apply bg-white p-[60px];
 }
-
 .contact h3 {
-  font-size: 24px;
-  font-weight: bold;
-  color: #000000;
-  margin-bottom: 20px;
+  @apply text-2xl font-[bold] text-black mb-5;
 }
-
 .contact p {
-  font-size: 16px;
-  color: #000000;
-  margin-bottom: 20px;
+  @apply text-base text-black mb-5;
 }
-
 .contact_information {
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
+  @apply flex items-center mb-2.5;
 }
-
 .contact_icon {
-  margin-right: 10px;
-  color: #10a8f0;
-  font-size: 20px;
+  @apply text-[#10a8f0] text-xl mr-2.5;
 }
-
 .contact_title {
-  font-size: 18px;
-  font-weight: bold;
-  color: #000000;
+  @apply text-lg font-[bold] text-black;
 }
-
 .contact_subtitle {
-  font-size: 16px;
-  color: #000000;
+  @apply text-base text-black;
 }
-
 .contact_form {
-  margin-top: 40px;
+  @apply mt-10;
 }
-
 .contact_label {
-  font-size: 16px;
-  font-weight: bold;
-  color: #000000;
+  @apply text-base font-[bold] text-black;
 }
-
 .contact_input {
-  width: 100%;
-  padding: 10px;
-  margin-top: 10px;
-  border: 1px solid #cccccc;
-  border-radius: 5px;
-  font-size: 16px;
-  color: #000000;
+  @apply w-full border text-base text-black mt-2.5 p-2.5 rounded-[5px] border-solid border-[#cccccc];
 }
-
 .button {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #10a8f0;
-  color: #ffffff;
-  font-size: 16px;
-  font-weight: bold;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
+  @apply inline-block bg-[#10a8f0] text-white text-base font-[bold] no-underline transition-[background-color] duration-[0.3s] ease-[ease] px-5 py-2.5 rounded-[5px] hover:bg-[#0c87c4];
 }
-
-.button:hover {
-  background-color: #0c87c4;
-}
-
 .button-flex {
-  display: flex;
-  align-items: center;
+  @apply flex items-center;
 }
-
 .button_icon {
-  margin-left: 5px;
-  font-size: 20px;
+  @apply text-xl ml-[5px];
 }
 
 /* Other general styles */
 .heading {
-  font-size: 36px;
-  font-weight: bold;
-  color: #000000;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  background-color: #ffffff;
+  @apply text-4xl font-[bold] text-black sticky z-[100] bg-white top-0;
 }
-
 .heading2 {
-  font-size: 36px;
-  font-weight: bold;
-  color: #000000;
-  background-color: #ffffff;
+  @apply text-4xl font-[bold] text-black bg-white;
 }
-
 .multiple-text {
-  font-weight: bold;
-  color: #10a8f0;
+  @apply font-[bold] text-[#10a8f0];
 }
-
 .btn {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #10a8f0;
-  color: #ffffff;
-  font-size: 16px;
-  font-weight: bold;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
+  @apply inline-block bg-[#10a8f0] text-white text-base font-[bold] no-underline transition-[background-color] duration-[0.3s] ease-[ease] px-5 py-2.5 rounded-[5px] hover:bg-[#0c87c4];
 }
-
-.btn:hover {
-  background-color: #0c87c4;
-}
-
 .home-img img,
 .about-img img {
-  width: 100%;
-  max-width: 400px;
-  height: auto;
-  border-radius: 5px;
+  @apply w-full max-w-[400px] h-auto rounded-[5px];
 }
-
 /* Keyframes animation*/
 
 @keyframes slideRight {

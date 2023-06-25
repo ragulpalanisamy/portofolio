@@ -3,7 +3,7 @@ import "../style/index.css";
 export default function Header() {
   return (
     <header className="header">
-      <a href="#" className="logo text-orange-500">
+      <a href="#" className="logo text-red-500">
         Portfolio
       </a>
       <nav id="navbar_top" className="navbar">

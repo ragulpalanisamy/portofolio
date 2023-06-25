@@ -42,14 +42,14 @@ export default function Home() {
   }, []);
 
   return (
-    <section className="home" id="home">
+    <section className="home max-w-full bg-slate-400" id="home">
       <section className="home-container">
         <h3>Hello, It's Me</h3>
         <h1>Ragul P</h1>
         <h3>
           And I'm a <span className="multiple-text"></span>
         </h3>
-        <p>
+        <p className="">
           Experienced front-end developer proficient in HTML, CSS, JavaScript,
           ReactJS, Bootstrap, and Tailwind. Skilled in creating responsive,
           user-friendly interfaces and delivering high-quality web applications.
@@ -57,7 +57,7 @@ export default function Home() {
           and implementing best practices for optimal user experiences.
         </p>
 
-        <div className="social-media">
+        <div className="social-media flex justify-center p-6">
           <a
             href="https://www.linkedin.com/in/ragul-p-139346194/"
             className="my-media-1"
@@ -80,8 +80,12 @@ export default function Home() {
           </a>
         </div>
       </section>
-      <div className="home-img">
-        <img src="/Ragul Img.jpg" alt="personal picture" />
+      <div className="home-img w-[500px] top-0">
+        <img
+          src="/Ragul Img.jpg"
+          alt="personal picture"
+          className="rounded-xl"
+        />
       </div>
     </section>
   );
