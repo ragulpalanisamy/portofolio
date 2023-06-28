@@ -61,7 +61,7 @@ export default function Home() {
 
           <div className="social-media flex justify-center p-6">
             <a
-              href="https://www.linkedin.com/in/ragul-p-139346194/"
+              href="https://www.linkedin.com/in/ragul-palanisamy-139346194/"
               className="my-media-1"
             >
               <AiFillLinkedin />
@@ -86,7 +86,7 @@ export default function Home() {
           <img
             src="/Ragul Img.jpg"
             alt="personal picture"
-            className="w-[500px] h-[500px] rounded-full object-cover top-0"
+            className="w-[500px] h-[500px] object-cover top-0"
           />
         </div>
       </section>
