@@ -1,8 +1,8 @@
-import { useState } from "react";
+// import { useState } from "react";
 import "../style/index.css";
 
 export default function Header() {
-  const [isHome, setIsHome] = useState(true);
+  /* const [isHome, setIsHome] = useState(true);
   const [isAbout, setIsAbout] = useState(false);
 
   const home = () => {
@@ -13,7 +13,7 @@ export default function Header() {
   const about = () => {
     setIsHome(false);
     setIsAbout(true);
-  };
+  }; */
   const scrollToSection = (sectionId: string) => {
     const section = document.getElementById(sectionId);
     if (section) {
