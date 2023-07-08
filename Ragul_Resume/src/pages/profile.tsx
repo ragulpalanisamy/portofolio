@@ -1,4 +1,5 @@
 import About from "../Component/About";
+import AlternateHeader from "../Component/AlternateHeader";
 import Contact from "../Component/Contact";
 import Experience from "../Component/Experience";
 import Header from "../Component/Header";
@@ -10,6 +11,7 @@ export default function profile() {
   return (
     <div>
       <Header />
+      <AlternateHeader />
       <Home />
       <About />
       <Skills />

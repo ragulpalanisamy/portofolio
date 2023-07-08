@@ -2,18 +2,6 @@
 import "../style/index.css";
 
 export default function Header() {
-  /* const [isHome, setIsHome] = useState(true);
-  const [isAbout, setIsAbout] = useState(false);
-
-  const home = () => {
-    setIsHome(true);
-    setIsAbout(false);
-  };
-
-  const about = () => {
-    setIsHome(false);
-    setIsAbout(true);
-  }; */
   const scrollToSection = (sectionId: string) => {
     const section = document.getElementById(sectionId);
     if (section) {
@@ -22,7 +10,7 @@ export default function Header() {
   };
 
   return (
-    <header className="header">
+    <header className="lg:header hidden">
       <a href="/" className="logo text-6xl">
         Portfolio
       </a>

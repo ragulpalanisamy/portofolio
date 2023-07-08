@@ -43,7 +43,7 @@ export default function Home() {
 
   return (
     <>
-      <section className="home max-w-full bg-[#707680]" id="home">
+      <section className="home mx-w-xs lg:max-w-full bg-[#707680] " id="home">
         <section className="home-container">
           <h3>Hello, It's Me</h3>
           <h1>Ragul P</h1>
